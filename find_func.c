@@ -15,9 +15,9 @@ void find_func(char *opcode, char *value, int ln, int format)
 	int flag;
 
 	instruction_t func_list[] = {
-		{"push", add_to_stack},
+		{"push", push},
 		{"pall", print_stack},
-		{"pint", print_top},
+		{"pint", peek},
 		{"pop", pop_top},
 		{"nop", nop},
 		{"swap", swap_nodes},
