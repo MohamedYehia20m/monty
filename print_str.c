@@ -2,21 +2,20 @@
 
 /**
  * print_str - Prints a string.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @ln: Interger representing the line number of of the opcode.
+ * @st: Pointer to a pointer pointing to top of the stack.
+ * @ln: line number of of the opcode.
  */
-void print_str(stack_t **stack, __attribute__((unused))unsigned int ln)
+void print_str(stack_t **st, __attribute__((unused))unsigned int ln)
 {
 	int ascii;
 	stack_t *tmp;
 
-	if (stack == NULL || *stack == NULL)
+	if (st == NULL || *st == NULL)
 	{
 		printf("\n");
 		return;
 	}
-
-	tmp = *stack;
+	tmp = *st;
 	while (tmp != NULL)
 	{
 		ascii = tmp->n;
