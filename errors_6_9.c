@@ -12,7 +12,7 @@ void errors_6_9(int error_code, ...)
 {
 	va_list ag;
 	char *op;
-	int l_num;
+	int l_number;
 
 	va_start(ag, error_code);
 	switch (error_code)
@@ -26,9 +26,9 @@ void errors_6_9(int error_code, ...)
 				va_arg(ag, int));
 			break;
 		case 8:
-			l_num = va_arg(ag, unsigned int);
+			l_number = va_arg(ag, unsigned int);
 			op = va_arg(ag, char *);
-			fprintf(stderr, "L%d: can't %s, stack too short\n", l_num, op);
+			fprintf(stderr, "L%d: can't %s, stack too short\n", l_number, op);
 			break;
 		case 9:
 			fprintf(stderr, "L%d: division by zero\n",
