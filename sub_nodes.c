@@ -1,22 +1,19 @@
 #include "monty.h"
 
 /**
- * sub_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * sub_nodes - subtracts the top two elements of the stack.
+ * @st: Pointer to a pointer pointing to top of the stack.
+ * @line_number: line number of of the opcode.
  */
-void sub_nodes(stack_t **stack, unsigned int line_number)
+void sub_nodes(stack_t **st, unsigned int line_number)
 {
 	int sum;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-
-		more_err(8, line_number, "sub");
-
-
-	(*stack) = (*stack)->next;
-	sum = (*stack)->n - (*stack)->prev->n;
-	(*stack)->n = sum;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+	if (st == NULL || *st == NULL || (*st)->next == NULL)
+		errors_6_9(8, line_number, "sub");
+	(*st) = (*st)->next;
+	sum = (*st)->n - (*st)->prev->n;
+	(*st)->n = sum;
+	free((*st)->prev);
+	(*st)->prev = NULL;
 }
