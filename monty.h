@@ -70,7 +70,7 @@ void find_func(char *, char *, int, int);
 stack_t *create_node(int n);
 void free_nodes(void);
 void print_stack(stack_t **, unsigned int);
-void add_to_stack(stack_t **, unsigned int);
+void push(stack_t **new_element, __attribute__((unused))unsigned int ln);
 void add_to_queue(stack_t **, unsigned int);
 
 void call_fun(op_func, char *, char *, int, int);
@@ -81,7 +81,7 @@ void nop(stack_t **, unsigned int);
 void swap_nodes(stack_t **, unsigned int);
 
 /*Math operations with nodes*/
-void add_nodes(stack_t **, unsigned int);
+void add_nodes(stack_t **stack, unsigned int ln);
 void sub_nodes(stack_t **, unsigned int);
 void div_nodes(stack_t **, unsigned int);
 void mul_nodes(stack_t **, unsigned int);
