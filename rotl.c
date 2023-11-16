@@ -2,23 +2,21 @@
 
 /**
  * rotl - Rotates the first node of the stack to the bottom.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @ln: Interger representing the line number of of the opcode.
+ * @st: Pointer to a pointer pointing to top of the stack.
+ * @ln: line number of of the opcode.
  */
-void rotl(stack_t **stack, __attribute__((unused))unsigned int ln)
+void rotl(stack_t **st, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	if (st == NULL || *st == NULL || (*st)->next == NULL)
 		return;
-
-	tmp = *stack;
+	tmp = *st;
 	while (tmp->next != NULL)
 		tmp = tmp->next;
-
-	tmp->next = *stack;
-	(*stack)->prev = tmp;
-	*stack = (*stack)->next;
-	(*stack)->prev->next = NULL;
-	(*stack)->prev = NULL;
+	tmp->next = *st;
+	(*st)->prev = tmp;
+	*st = (*st)->next;
+	(*st)->prev->next = NULL;
+	(*st)->prev = NULL;
 }
