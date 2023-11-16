@@ -1,18 +1,18 @@
 #include "monty.h"
 
 /**
- * print_stack - Adds a node to the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
+ * print_stack - prints the stack.
+ * @st: Pointer to a pointer pointing to top of the stack.
  * @line_number: line number of  the opcode.
  */
-void print_stack(stack_t **stack, unsigned int line_number)
+void print_stack(stack_t **st, unsigned int line_number)
 {
 	stack_t *tmp;
 
 	(void) line_number;
-	if (stack == NULL)
+	if (st == NULL)
 		exit(EXIT_FAILURE);
-	tmp = *stack;
+	tmp = *st;
 	while (tmp != NULL)
 	{
 		printf("%d\n", tmp->n);
