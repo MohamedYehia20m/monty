@@ -2,8 +2,8 @@
 
 /**
  * swap_nodes - Swaps the top two elements of the stack.
- * @st: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * @st: Pointer to a pointer pointing to top of the stack.
+ * @line_number: line number of of the opcode.
  */
 void swap_nodes(stack_t **st, unsigned int line_number)
 {
