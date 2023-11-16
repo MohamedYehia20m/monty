@@ -1,20 +1,19 @@
 #include "monty.h"
 
 /**
- * pop_top - Adds a node to the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * pop_top - remove the top of the stack.
+ * @st: Pointer to a pointer pointing to top of the stack.
+ * @line_number: line number of of the opcode.
  */
-void pop_top(stack_t **stack, unsigned int line_number)
+void pop_top(stack_t **st, unsigned int line_number)
 {
 	stack_t *tmp;
 
-	if (stack == NULL || *stack == NULL)
-		more_err(7, line_number);
-
-	tmp = *stack;
-	*stack = tmp->next;
-	if (*stack != NULL)
-		(*stack)->prev = NULL;
+	if (st == NULL || *st == NULL)
+		errors_6_9(7, line_number);
+	tmp = *st;
+	*st = tmp->next;
+	if (*st != NULL)
+		(*st)->prev = NULL;
 	free(tmp);
 }
