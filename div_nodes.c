@@ -10,10 +10,10 @@ void div_nodes(stack_t **stack, unsigned int ln)
 	int submission;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, ln, "div");
+		errors_6_9(8, ln, "div");
 
 	if ((*stack)->n == 0)
-		more_err(9, ln);
+		errors_6_9(9, ln);
 	(*stack) = (*stack)->next;
 	submission = (*stack)->n / (*stack)->prev->n;
 	(*stack)->n = submission;

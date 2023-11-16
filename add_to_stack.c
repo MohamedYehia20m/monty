@@ -14,7 +14,7 @@ void push(stack_t **new_element, __attribute__((unused))unsigned int ln)
 		exit(EXIT_FAILURE);
 	if (head == NULL)
 	{
-		head = *new_node;
+		head = *new_element;
 		return;
 	}
 	temp = head;

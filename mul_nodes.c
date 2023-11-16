@@ -10,7 +10,7 @@ void mul_nodes(stack_t **stack, unsigned int ln)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, ln, "mul");
+		errors_6_9(8, ln, "mul");
 
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n * (*stack)->prev->n;

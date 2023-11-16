@@ -16,7 +16,7 @@ int parse_line(char *bf, int ln, int format)
 	const char *delim = "\n ";
 
 	if (bf == NULL)
-		err(4);
+		errors_1_5(4);
 
 	opcode = strtok(bf, delim);
 	if (opcode == NULL)

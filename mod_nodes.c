@@ -11,7 +11,7 @@ void mod_nodes(stack_t **stack, unsigned int ln)
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 
-		more_err(8, ln, "mod");
+		errors_6_9(8, ln, "mod");
 
 
 	if ((*stack)->n == 0)

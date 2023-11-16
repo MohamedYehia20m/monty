@@ -10,7 +10,7 @@ void add_nodes(stack_t **stack, unsigned int ln)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, ln, "add");
+		errors_6_9(8, ln, "add");
 
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n + (*stack)->prev->n;

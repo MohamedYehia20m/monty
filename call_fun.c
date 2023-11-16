@@ -24,7 +24,7 @@ void call_fun(op_func func, char *op, char *val, int ln, int format)
 			redflag = -1;
 		}
 		if (val == NULL)
-			err(5, ln);
+			errors_1_5(5, ln);
 		for (i = 0; val[i] != '\0'; i++)
 		{
 			if (isdigit(val[i]) == 0)
