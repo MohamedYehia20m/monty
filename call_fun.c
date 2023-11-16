@@ -12,16 +12,16 @@
 void call_fun(op_func func, char *op, char *val, int ln, int format)
 {
 	stack_t *node;
-	int flag;
+	int redflag;
 	int i;
 
-	flag = 1;
+	redflag = 1;
 	if (strcmp(op, "push") == 0)
 	{
 		if (val != NULL && val[0] == '-')
 		{
 			val = val + 1;
-			flag = -1;
+			redflag = -1;
 		}
 		if (val == NULL)
 			err(5, ln);
@@ -30,7 +30,7 @@ void call_fun(op_func func, char *op, char *val, int ln, int format)
 			if (isdigit(val[i]) == 0)
 				err(5, ln);
 		}
-		node = create_node(atoi(val) * flag);
+		node = create_node(atoi(val) * redflag);
 		if (format == 0)
 			func(&node, ln);
 		if (format == 1)
