@@ -15,7 +15,7 @@ void mod_nodes(stack_t **stack, unsigned int ln)
 
 
 	if ((*stack)->n == 0)
-		more_err(9, ln);
+		errors_6_9(9, ln);
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n % (*stack)->prev->n;
 	(*stack)->n = sum;
