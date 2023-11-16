@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * print_top - Prints the top node of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * peek - Prints the top node of the stack.
+ * @st: Pointer to a pointer pointing to top of the stack.
+ * @line_number: line number of of the opcode.
  */
-void print_top(stack_t **stack, unsigned int line_number)
+void peek(stack_t **st, unsigned int line_number)
 {
-	if (stack == NULL || *stack == NULL)
-		more_err(6, line_number);
-	printf("%d\n", (*stack)->n);
+	if (st == NULL || *st == NULL)
+		errors_6_9(6, line_number);
+	printf("%d\n", (*st)->n);
 }
